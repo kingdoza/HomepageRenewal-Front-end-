@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, a:link, a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    background-color: transparent;
+    position: fixed;
+    color: white;
+}
+
+header.active {
+    background-color: rgba(0, 0, 0);
+    animation: FadeIn 0.5s ease-in-out;
+}
+
+@keyframes FadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+header .container {
+    padding: 0 1rem;
+}
+
+header .container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header .container .ces-home {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+    font-size: 1.3rem;
+    float: left;
+}
+
+header .container nav {
+    float: right;
+    /* padding: 1.1rem 0; */
+}
+
+header .container nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+header .container nav ul li .toolbar, header .container nav ul li button:hover,  header .container nav ul li button.active {
+    background-color: rgba(86, 139, 255, 0.8);
+}
+
+header .container nav ul li .toolbar {
+    padding-bottom: 1rem;
+    /* padding: 0.5rem 0; */
+    font-family: 'Noto Serif KR', serif;
+    text-align: center;
+}
+
+header .container nav ul li .toolbar p {
+    cursor: pointer;
+}
+
+header .container nav ul li .toolbar {
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+header .container nav ul li button.active + .toolbar {
+    visibility: visible;
+    height: 220px;
+}
+
+header .container nav ul li .toolbar p {
+    font-size: 0.95rem;
+    padding: 0.2rem 0;
+    /* margin: 0.4rem 0; */
+}
+
+header .container nav ul li .toolbar p:hover {
+    background-color: rgba(71, 197, 255, 0.6);
+}
+
+header .container nav ul li button {
+    border: none;
+    color: white;
+    background-color: transparent;
+    font-family: 'Noto Serif KR', serif;
+    font-size: 1.1rem;
+    /* margin: auto 1.2rem; */
+    padding: 1.1rem 1.8rem;
+    text-align: center;
+}
+
+header .container .ces-home img {
+    height: 100%;
+    float: left;
+}
+
+header .container .ces-home h2 {
+    line-height: 100%;
+    float: left;
+}
+
+header .container .ces-home::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+main {
+    height: 20vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url(image/main_background.png) 70% center;
+    background-size: cover;
+    color: white;
+    font-family: 'Gothic A1', sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+main .container {
+    text-align: right;
+    padding-right: 5rem;
+    padding-top: 5rem;
+}
+
+.container .semester {
+    border-radius: 5px;
+    padding: 2%;
+    float: left;
+    background-color: rgb(240, 240, 240);
+    width: 49%;
+    margin-bottom: 4%;
+}
+
+.container .semester:nth-child(2n + 1) {
+    margin-right: 2%;
+}
+
+.container .curriculum {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+.container .curriculum::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.container .subject {
+    background-color: white;
+    height: 50px;
+    margin-top: 0.6rem;
+}
+
+.container .subject .box {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 900;
+    width: 50px;
+    height: 100%;
+    line-height: 50px;
+    background-color: rgb(255, 178, 35);
+    text-align: center;
+    float: left;
+}
+
+.container .subject .info {
+    padding-left: 0.6rem;
+    padding-top: 0.5rem;
+    float: left;
+    height: 100%;
+    display: block;
+}
+
+.container .subject .info .name {
+    font-size: 1.35rem;
+    line-height: 0.8em;
+}
+
+.container .subject::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+aside .container {
+    padding-top: 2rem;
+    width: 23%;
+    float: left;
+}
+
+aside .container .login, aside .container .affairs {
+    padding: 2rem 1rem;
+    font-family: 'Gothic A1', sans-serif;
+    border-top: 1px solid rgb(184, 184, 184);
+    border-bottom: 1px solid rgb(184, 184, 184);
+}
+
+aside .container .login {
+    margin-bottom: 1.4rem;
+}
+
+aside .container .login input.box,  aside .container .login button {
+    border-radius: 5px;
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    border: none;
+}
+
+aside .container .login h6 {
+    color: rgb(18, 156, 190);
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+aside .container .login h6 strong {
+    font-weight: 900;
+    color: rgb(0, 121, 151);
+}
+
+aside .container .login input.box {
+    background-color: rgb(209, 209, 209);
+    outline: none;
+}
+
+aside .container .login input.box:focus {
+    border: 1px solid #719ece;
+    box-shadow: 0 0 10px #719ece;
+}
+
+aside .container .login input[type='checkbox'] {
+    cursor: pointer;
+    margin-top: 0.7rem;
+    font-size: 0.5rem;
+}
+
+aside .container .login button {
+    cursor: pointer;
+    background-color: rgb(47, 162, 216);
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+aside .container .affairs {
+    font-size: 1.15rem;
+    font-weight: 200;
+}
+
+aside .container .affairs h6 {
+    color: rgb(0, 121, 151);
+    font-size: 1.4rem;
+    padding-bottom: 1.4rem;
+}
+
+aside .container .affairs ul li:nth-of-type(1) {
+    border-top: 1px solid rgb(218, 218, 218);
+}
+
+aside .container .affairs ul li::before {
+    content: "▶";
+    font-size: 0.5rem;
+    margin-right: 8px;
+}
+
+aside .container .affairs ul li {
+    border-bottom: 1px solid rgb(218, 218, 218);
+    padding: 0.8rem;
+}
+
+aside .container .affairs ul li:nth-last-of-type(3) {
+    background-color: rgb(18, 156, 190);
+    font-weight: 400;
+    color: white;
+}
+
+section .curriculum {
+    margin-left: 3%;
+    float: left;
+    width: 74%;
+}
+
+div.container.main {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+div.container.main .title {
+    border-bottom: 1px solid rgb(184, 184, 184);
+    font-size: 1.3rem;
+    padding: 2rem 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+div.container.main .title p {
+    font-size: 0.9rem;
+}
+
+div.container.main .selection {
+    padding: 2.5rem 0 1.8rem;
+    font-size: 1.2rem;
+}
+
+div.container.main .selection::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+div.container.main .selection p {
+    float: left;
+}
+
+div.container.main .selection select {
+    border-color: rgb(187, 187, 187);
+    border-radius: 5px;
+    position: relative;
+    left: 2%;
+    float: left;
+    width: 20%;
+    padding: 0.3rem 0 0.3rem 0.5rem;
+    font-size: 1rem;
+}
+
+div.container.main .selection option {
+    display: block;
+    padding: 1rem;
+}
+
+div.container.main .semester .top {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+div.container.main .semester span {
+    font-size: 1.25rem;
+}
+
+div.container.main .semester p {
+    font-size: 0.9rem;
+}
